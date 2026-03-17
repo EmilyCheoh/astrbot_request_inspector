@@ -23,7 +23,7 @@ from astrbot.api.star import Context, Star, register
 
 
 @register(
-    "请求检视",
+    "字数统计",
     "FelisAbyssalis",
     "LLM 请求检视插件 - 在所有注入完成后打印发给模型的完整请求构成",
     "1.0.0",
@@ -74,14 +74,14 @@ class RequestInspectorPlugin(Star):
     # 事件钩子
     # -------------------------------------------------------------------
 
-    @filter.on_llm_request(priority=-2000)
+    @filter.on_llm_request(priority=-1000)
     async def handle_inspect(
         self, event: AstrMessageEvent, req: ProviderRequest
     ):
         """
         在所有插件注入完成后，打印请求的完整构成。
 
-        priority=-2000 确保在 PromptTags (-1000) 之后执行，
+        priority=-1000 确保在 PromptTags (-500) 之后执行，
         看到的是最终发给模型的状态。
         """
         try:

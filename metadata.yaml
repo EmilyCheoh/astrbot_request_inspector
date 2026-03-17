@@ -1,4 +1,4 @@
-name: astrbot_request_inspector
+name: 字数统计
 description: 请求检视插件 - 在所有注入完成后打印发给模型的完整请求构成
 version: 1.0.0
 author: Felis Abyssalis
