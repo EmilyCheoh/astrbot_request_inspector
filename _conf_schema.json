@@ -1,0 +1,12 @@
+{
+    "output_mode": {
+        "description": "输出模式",
+        "hint": "summary: 只打印各字段字符数；full: 打印完整内容（日志量大，仅排查时使用）。",
+        "type": "string",
+        "default": "summary",
+        "options": [
+            "summary",
+            "full"
+        ]
+    }
+}
