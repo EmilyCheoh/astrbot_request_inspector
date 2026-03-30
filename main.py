@@ -2,7 +2,7 @@
 RequestInspector - LLM 请求检视插件
 
 在所有其他插件（PromptTags、LivingMemory 等）完成注入之后，
-以 priority=-2000 最后执行，打印发给模型的完整请求构成。
+以 priority=-1000 最后执行，打印发给模型的完整请求构成。
 
 两种模式：
 - summary（默认）：只打印 system_prompt / prompt / contexts 的字符数
