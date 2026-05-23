@@ -106,7 +106,7 @@ class RequestInspectorPlugin(Star):
 
             # --- Summary 模式：只打印字符数 ---
             logger.info(
-                f"[{session_id}] RequestInspector: "
+                f"RequestInspector: "
                 f"system_prompt={sp_len}字 | "
                 f"prompt={pr_len}字 | "
                 f"contexts={ctx_count}条/{ctx_total}字"
@@ -119,19 +119,19 @@ class RequestInspectorPlugin(Star):
             separator = "=" * 60
 
             logger.info(
-                f"[{session_id}] RequestInspector [FULL] "
+                f"RequestInspector 【FULL】"
                 f"{separator}"
             )
 
             # system_prompt
             logger.info(
-                f"[{session_id}] RequestInspector [system_prompt] "
+                f"RequestInspector 【system_prompt】"
                 f"({sp_len}字):\n{sp}"
             )
 
             # prompt
             logger.info(
-                f"[{session_id}] RequestInspector [prompt] "
+                f"RequestInspector 【prompt】"
                 f"({pr_len}字):\n{pr}"
             )
 
@@ -141,17 +141,17 @@ class RequestInspectorPlugin(Star):
                     role = self._extract_role(msg)
                     text = self._extract_text(msg)
                     logger.info(
-                        f"[{session_id}] RequestInspector "
+                        f"RequestInspector "
                         f"[context #{i}] role={role} ({len(text)}字):\n"
                         f"{text}"
                     )
             else:
                 logger.info(
-                    f"[{session_id}] RequestInspector [contexts] 空"
+                    f"RequestInspector [contexts] 空"
                 )
 
             logger.info(
-                f"[{session_id}] RequestInspector [END] "
+                f"RequestInspector 【END】"
                 f"{separator}"
             )
 
